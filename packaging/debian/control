@@ -7,6 +7,7 @@ Homepage: https://github.com/Swordfish90/cool-retro-term
 Vcs-Git: git://github.com/barak/cool-retro-term.git
 Vcs-Browser: https://github.com/barak/cool-retro-term
 Build-Depends: debhelper (>= 9), qmlscene,
+ help2man,
  qt5-qmake, qtdeclarative5-dev, qml-module-qtquick-controls,
  qml-module-qtgraphicaleffects, qml-module-qtquick-dialogs,
  qml-module-qtquick-localstorage, qml-module-qtquick-window2
