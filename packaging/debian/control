@@ -1,12 +1,13 @@
 Source: cool-retro-term
 Maintainer: Jeka Der <jekader@gmail.com>
+Uploaders: Barak A. Pearlmutter <bap@debian.org>
 Section: x11
 Priority: optional
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: https://github.com/Swordfish90/cool-retro-term
 Vcs-Git: git://github.com/barak/cool-retro-term.git
 Vcs-Browser: https://github.com/barak/cool-retro-term
-Build-Depends: debhelper (>= 9), qmlscene,
+Build-Depends: debhelper (>= 10), qmlscene,
  help2man,
  qt5-qmake, qtdeclarative5-dev, qml-module-qtquick-controls,
  qml-module-qtgraphicaleffects, qml-module-qtquick-dialogs,

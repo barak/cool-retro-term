@@ -7,7 +7,7 @@ DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
 %:
-	dh $@ --parallel
+	dh $@
 
 ver := $(shell dpkg-parsechangelog --show-field 'Version')
 
