@@ -1,5 +1,9 @@
-cool-retro-term (1.0.1-1) unstable; urgency=medium
+cool-retro-term (1.0.1-1) UNRELEASED; urgency=medium
 
+  [ Jeka Der ]
+  * Initial release. (Closes: #758238)
+
+  [ Barak A. Pearlmutter ]
   * Adopt packaging
     - based on packaging by Jeka Der <jekader@gmail.com>
     - removing stanzas regarding unreleased versions
@@ -11,4 +15,4 @@ cool-retro-term (1.0.1-1) unstable; urgency=medium
   * Generate & install man page using help2man
   * Bump to debhelper 10
 
- -- Barak A. Pearlmutter <bap@debian.org>  Wed, 29 Nov 2017 21:24:04 +0000
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 29 Nov 2017 21:26:59 +0000
