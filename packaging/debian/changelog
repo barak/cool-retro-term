@@ -13,6 +13,6 @@ cool-retro-term (1.0.1-1) UNRELEASED; urgency=medium
   * Hardened build per policy, for no particularly good reason
   * Register as alternative x-terminal-emulator
   * Generate & install man page using help2man
-  * Bump to debhelper 10
+  * Bump to debhelper 11
 
- -- Barak A. Pearlmutter <bap@debian.org>  Wed, 29 Nov 2017 21:26:59 +0000
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 29 May 2018 16:57:32 +0100
