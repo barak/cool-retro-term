@@ -33,6 +33,10 @@ int main(int argc, char *argv[])
     // This disables QT appmenu under Ubuntu, which is not working with QML apps.
     setenv("QT_QPA_PLATFORMTHEME", "", 1);
 
+#if defined (Q_OS_LINUX)
+    setenv("QSG_RENDER_LOOP", "threaded", 0);
+#endif
+
 #if defined(Q_OS_MAC)
     // This allows UTF-8 characters usage in OSX.
     setenv("LC_CTYPE", "UTF-8", 1);
@@ -70,8 +74,10 @@ int main(int argc, char *argv[])
         return 0;
     }
 
+    QString appVersion("1.1.1");
+
     if (args.contains("-v") || args.contains("--version")) {
-        qDebug() << "cool-retro-term 1.0.1";
+        qDebug() << ("cool-retro-term " + appVersion).toStdString().c_str();
 	return 0;
     }
 
@@ -82,6 +88,7 @@ int main(int argc, char *argv[])
     }
     QVariant command(cmdList.empty() ? QVariant() : cmdList[0]);
     QVariant commandArgs(cmdList.size() <= 1 ? QVariant() : QVariant(cmdList.mid(1)));
+    engine.rootContext()->setContextProperty("appVersion", appVersion);
     engine.rootContext()->setContextProperty("defaultCmd", command);
     engine.rootContext()->setContextProperty("defaultCmdArgs", commandArgs);
 

@@ -24,7 +24,7 @@ import QtQuick.Controls 1.0
 import "utils.js" as Utils
 
 QtObject{
-    readonly property string version: "1.1.0"
+    readonly property string version: appVersion
     readonly property int profileVersion: 2
 
     // STATIC CONSTANTS ////////////////////////////////////////////////////////
@@ -32,6 +32,9 @@ QtObject{
     readonly property real screenCurvatureSize: 0.4
     readonly property real minimumFontScaling: 0.25
     readonly property real maximumFontScaling: 2.50
+
+    readonly property real minBurnInFadeTime: 160
+    readonly property real maxBurnInFadeTime: 1600
 
     // GENERAL SETTINGS ///////////////////////////////////////////////////////
 
@@ -52,7 +55,9 @@ QtObject{
     property bool verbose: false
 
     property real bloomQuality: 0.5
+
     property real burnInQuality: 0.5
+    property bool useFastBurnIn: Qt.platform.os === "osx" ? false : true
 
     onWindowScalingChanged: handleFontChanged();
 
@@ -129,7 +134,7 @@ QtObject{
 
     property FontLoader fontLoader: FontLoader { }
 
-    onFontScalingChanged: handleFontChanged();
+    onTotalFontScalingChanged: handleFontChanged();
     onFontWidthChanged: handleFontChanged();
 
     function getIndexByName(name) {
@@ -202,7 +207,8 @@ QtObject{
             bloomQuality: bloomQuality,
             burnInQuality: burnInQuality,
             useCustomCommand: useCustomCommand,
-            customCommand: customCommand
+            customCommand: customCommand,
+            useFastBurnIn: useFastBurnIn
         }
         return stringify(settings);
     }
@@ -288,6 +294,8 @@ QtObject{
 
         useCustomCommand = settings.useCustomCommand !== undefined ? settings.useCustomCommand : useCustomCommand
         customCommand = settings.customCommand !== undefined ? settings.customCommand : customCommand
+
+        useFastBurnIn = settings.useFastBurnIn !== undefined ? settings.useFastBurnIn : useFastBurnIn;
     }
 
     function loadProfileString(profileString){
