@@ -7,7 +7,7 @@ Standards-Version: 4.3.0
 Homepage: https://github.com/Swordfish90/cool-retro-term
 Vcs-Git: https://github.com/barak/cool-retro-term.git
 Vcs-Browser: https://github.com/barak/cool-retro-term
-Build-Depends: debhelper (>= 11), qmlscene,
+Build-Depends: debhelper-compat (= 12), qmlscene,
  help2man,
  qt5-qmake, qtdeclarative5-dev, qml-module-qtquick-controls,
  qml-module-qtgraphicaleffects, qml-module-qtquick-dialogs,
