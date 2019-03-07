@@ -1,4 +1,4 @@
-cool-retro-term (1.1.0-1) UNRELEASED; urgency=medium
+cool-retro-term (1.1.1-1) UNRELEASED; urgency=medium
 
   [ Jeka Der ]
   * Initial release. (Closes: #758238)
@@ -13,6 +13,6 @@ cool-retro-term (1.1.0-1) UNRELEASED; urgency=medium
   * Hardened build per policy, for no particularly good reason
   * Register as alternative x-terminal-emulator
   * Generate & install man page using help2man
-  * Bump to debhelper 11
+  * Bump to debhelper 12
 
- -- Barak A. Pearlmutter <barak@pearlmutter.net>  Sat, 29 Dec 2018 11:49:28 +0000
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 07 Mar 2019 22:07:44 +0000
