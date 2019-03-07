@@ -20,7 +20,13 @@ This terminal emulator works under Linux and macOS and requires Qt 5.2 or higher
 ## Install
 Walk the easy way and install cool-retro-term using one of these convenient packages:
 
-**Fedora** has the `cool-retro-term` in the offcial repositories. All you have to do is `sudo dnf install cool-retro-term`.
+Just grab the latest AppImage from the release page and make it executable and run it:
+
+    wget https://github.com/Swordfish90/cool-retro-term/releases/download/1.1.1/Cool-Retro-Term-1.1.1-x86_64.AppImage
+    chmod a+x Cool-Retro-Term-1.1.1-x86_64.AppImage
+    ./Cool-Retro-Term-1.1.1-x86_64.AppImage
+
+**Fedora** has the `cool-retro-term` in the official repositories. All you have to do is `sudo dnf install cool-retro-term`.
 
 Users of **openSUSE** can grab a package from [Open Build Service](http://software.opensuse.org/package/cool-retro-term).
 
@@ -48,6 +54,11 @@ A word of warning: USE flags and keywords are to be added to portage's configura
 Users of **Ubuntu 14.04 LTS (Trusty) up to 15.10 (Wily)** can use [this PPA](https://launchpad.net/~bugs-launchpad-net-falkensweb).
 
 **Ubuntu 17.10** can use [this PPA](https://launchpad.net/%7Evantuz/+archive/ubuntu/cool-retro-term)
+
+**Solus** users can install using `eopg`:
+```
+eopkg it cool-retro-term
+```
 
 **macOS** users can grab the latest dmg from the release page: https://github.com/Swordfish90/cool-retro-term/releases
 
