@@ -3,7 +3,7 @@ Maintainer: Jeka Der <jekader@gmail.com>
 Uploaders: Barak A. Pearlmutter <bap@debian.org>
 Section: x11
 Priority: optional
-Standards-Version: 4.3.0
+Standards-Version: 4.4.0
 Homepage: https://github.com/Swordfish90/cool-retro-term
 Vcs-Git: https://github.com/barak/cool-retro-term.git
 Vcs-Browser: https://github.com/barak/cool-retro-term
