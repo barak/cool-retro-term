@@ -40,12 +40,12 @@ or use:
 
 to install precompiled from community repository.
 
-**Gentoo** users can now install the third release "1.1.0" from a 3rd-party repository preferably via layman:
+**Gentoo** users can now install the fourth release "1.1.1" from a 3rd-party repository preferably via layman:
 
     USE="git" emerge app-portage/layman
     wget https://www.gerczei.eu/files/gerczei.xml -O /etc/layman/overlays/gerczei.xml
     layman -f -a qt -a gerczei # those who've added the repo before 27/08/17 should remove, update and add it again as its source has changed
-    ACCEPT_KEYWORDS="~*" emerge =x11-terms/cool-retro-term-1.1.0::gerczei
+    ACCEPT_KEYWORDS="~*" emerge =x11-terms/cool-retro-term-1.1.1::gerczei
 
 The live ebuild (version 9999-r1) tracking the bleeding-edge WIP codebase also remains available.
 
@@ -60,7 +60,23 @@ Users of **Ubuntu 14.04 LTS (Trusty) up to 15.10 (Wily)** can use [this PPA](htt
 eopkg it cool-retro-term
 ```
 
-**macOS** users can grab the latest dmg from the release page: https://github.com/Swordfish90/cool-retro-term/releases
+**macOS** users can grab the latest dmg from the [release page](https://github.com/Swordfish90/cool-retro-term/releases) or install via Homebrew:
+```
+brew cask install cool-retro-term
+```
+
+**FreeBSD** users can install cool-retro-term with `pkg`:
+
+    pkg install cool-retro-term
+    
+## Build instructions (FreeBSD)
+
+Grab a copy of [the FreeBSD Ports Collection](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html), modify [`/usr/ports/x11/cool-retro-term/Makefile`](https://svnweb.freebsd.org/ports/head/x11/cool-retro-term/Makefile?view=markup) as you like, and then run `make install` to build and install the emulator:
+
+```
+cd /usr/ports/x11/cool-retro-term
+make install
+```
 
 ## Build instructions (Linux)
 
