@@ -1,3 +1,3 @@
 version=4
-https://github.com/Swordfish90/cool-retro-term/tags \
-   (?:.*?/)?v?(\d[\d.]*)\.tar\.gz debian uupdate
+https://github.com/Swordfish90/@PACKAGE@/tags \
+   (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@ debian uupdate
