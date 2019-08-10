@@ -1,4 +1,4 @@
-cool-retro-term (1.1.1-1) UNRELEASED; urgency=medium
+cool-retro-term (1.1.1-1) unstable; urgency=medium
 
   [ Jeka Der ]
   * Initial release. (Closes: #758238)
@@ -14,5 +14,6 @@ cool-retro-term (1.1.1-1) UNRELEASED; urgency=medium
   * Register as alternative x-terminal-emulator
   * Generate & install man page using help2man
   * Bump to debhelper 12
+  * Put qmltermwidget/ submodule in debian source patch (yuck)
 
- -- Barak A. Pearlmutter <bap@debian.org>  Thu, 07 Mar 2019 22:07:44 +0000
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 10 Aug 2019 17:34:42 +0200
