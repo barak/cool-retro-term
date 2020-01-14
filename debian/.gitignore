@@ -1,5 +1,10 @@
 /*.debhelper.log
 /*.substvars
+/.debhelper/
 /cool-retro-term.1
 /cool-retro-term/
 /files
+/fonts-hermit/
+/fonts-proggy/
+/fonts-terminus/
+/tmp/
