@@ -1,7 +1,9 @@
 Source: cool-retro-term
-Maintainer: Jeka Der <jekader@gmail.com>
-Uploaders: Barak A. Pearlmutter <bap@debian.org>
-Section: x11
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Uploaders: Jeka Der <jekader@gmail.com>,
+	   Gürkan Myczko <gurkan@phys.ethz.ch>,
+	   Axel Beckert <abe@debian.org>
+Section: non-free/x11
 Priority: optional
 Standards-Version: 4.4.0
 Homepage: https://github.com/Swordfish90/cool-retro-term
@@ -15,12 +17,44 @@ Build-Depends: debhelper-compat (= 12), qmlscene,
 
 Package: cool-retro-term
 Architecture: any
-Replaces: cool-old-term
 Provides: x-terminal-emulator
 Depends: qml-module-qtquick-controls, qml-module-qtgraphicaleffects,
  qml-module-qtquick-dialogs, qml-module-qtquick-localstorage,
- qml-module-qtquick-window2, ${shlibs:Depends}, ${misc:Depends}
+ qml-module-qtquick-window2, ${shlibs:Depends}, ${misc:Depends},
+ qml-module-qt-labs-settings, qml-module-qt-labs-folderlistmodel,
+ fonts-inconsolata, fonts-3270
 Description: terminal emulator which mimics old screens
- cool-retro-term is a terminal emulator which mimics the look and feel
+ This is a terminal emulator which mimics the look and feel
  of the old cathode tube screens. It has been designed to be eye-candy,
  customizable, and reasonably lightweight.
+
+Package: fonts-hermit
+Architecture: any
+Multi-Arch: foreign
+Section: non-free/fonts
+Depends: ${misc:Depends}
+Description: Monospace Hermit Font for programming
+ This is a monospace font designed to be clear, pragmatic and very readable.
+ Its creation has been focused on programming. Every glyph was carefully
+ planned and calculated, according to defined principles and rules. For this
+ reason, Hermit is coherent and regular.
+
+Package: fonts-terminus
+Architecture: any
+Multi-Arch: foreign
+Section: non-free/fonts
+Depends: ${misc:Depends}
+Description: Terminus monospace font
+ This is a fixed-width vector font called Terminus. It is suitable for
+ terminals, editors, etc. If you have to work for extended time in front of
+ monitor (i.e. over eight hours), you may find that using this font reduces
+ your eyes-fatigue.
+
+Package: fonts-proggy
+Architecture: any
+Multi-Arch: foreign
+Section: non-free/fonts
+Depends: ${misc:Depends}
+Description: Monospaced bitmap programming font
+ These are a set of fixed-width screen fonts that are designed for code
+ listings. This is only the tiny version of the font collection.

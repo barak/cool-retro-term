@@ -9,11 +9,20 @@ cool-retro-term (1.1.1-1) unstable; urgency=medium
     - removing stanzas regarding unreleased versions
   * Track upstream changes
   * Put in section x11
+  * Bump debhelper version
   * Bump debian standards version
   * Hardened build per policy, for no particularly good reason
   * Register as alternative x-terminal-emulator
   * Generate & install man page using help2man
-  * Bump to debhelper 12
-  * Put qmltermwidget/ submodule in debian source patch (yuck)
+  * Merge excellent packaging scripts by ... [ Gürkan Myczko ]
 
- -- Barak A. Pearlmutter <bap@debian.org>  Sat, 10 Aug 2019 17:34:42 +0200
+  [ Gürkan Myczko ]
+  * Merged by BAP
+  * See http://phd-sid.ethz.ch/debian/cool-retro-term/VERYNEW/
+  * Include qmltermwidget in sources
+  * Cull serious non-free materials
+  * Package fonts
+  * Package in non-free due to free-but-not-free font licensing
+  * General packaging goodness
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 14 Jan 2020 15:26:35 +0100
