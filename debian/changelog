@@ -1,0 +1,5 @@
+cool-retro-term (1.1.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #758238)
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Tue, 22 Jan 2019 05:24:27 +0100

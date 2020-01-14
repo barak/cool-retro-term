@@ -1,0 +1,56 @@
+Source: cool-retro-term
+Section: non-free/x11
+Priority: optional
+Maintainer: Gürkan Myczko <gurkan@phys.ethz.ch>
+Uploaders: Axel Beckert <abe@debian.org>
+XS-Autobuild: yes
+Standards-Version: 4.1.2
+Build-Depends: debhelper (>= 11), qmlscene,
+ qt5-qmake, qtdeclarative5-dev, qml-module-qtquick-controls,
+ qml-module-qtgraphicaleffects, qml-module-qtquick-dialogs,
+ qml-module-qtquick-localstorage, qml-module-qtquick-window2,
+ qtchooser
+
+Package: cool-retro-term
+Architecture: any
+Replaces: cool-old-term
+Depends: qml-module-qtquick-controls, qml-module-qtgraphicaleffects,
+ qml-module-qtquick-dialogs, qml-module-qtquick-localstorage,
+ qml-module-qtquick-window2, ${shlibs:Depends}, ${misc:Depends},
+ qml-module-qt-labs-settings, qml-module-qt-labs-folderlistmodel,
+ fonts-inconsolata, fonts-3270
+Description: terminal emulator which mimics old screens
+ This is a terminal emulator which mimics the look and feel
+ of the old cathode tube screens. It has been designed to be eye-candy,
+ customizable, and reasonably lightweight.
+
+Package: fonts-hermit
+Architecture: any
+Multi-Arch: foreign
+Section: non-free/fonts
+Depends: ${misc:Depends}
+Description: Monospace Hermit Font for programming
+ This is a monospace font designed to be clear, pragmatic and very readable.
+ Its creation has been focused on programming. Every glyph was carefully
+ planned and calculated, according to defined principles and rules. For this
+ reason, Hermit is coherent and regular.
+
+Package: fonts-terminus
+Architecture: any
+Multi-Arch: foreign
+Section: non-free/fonts
+Depends: ${misc:Depends}
+Description: Terminus monospace font
+ This is a fixed-width vector font called Terminus. It is suitable for
+ terminals, editors, etc. If you have to work for extended time in front of
+ monitor (i.e. over eight hours), you may find that using this font reduces
+ your eyes-fatigue.
+
+Package: fonts-proggy
+Architecture: any
+Multi-Arch: foreign
+Section: non-free/fonts
+Depends: ${misc:Depends}
+Description: Monospaced bitmap programming font
+ These are a set of fixed-width screen fonts that are designed for code
+ listings. This is only the tiny version of the font collection.
