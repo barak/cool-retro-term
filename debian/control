@@ -6,6 +6,7 @@ Uploaders: Jeka Der <jekader@gmail.com>,
 Section: non-free/x11
 Priority: optional
 Standards-Version: 4.4.1
+Rules-Requires-Root: no
 Homepage: https://github.com/Swordfish90/cool-retro-term
 Vcs-Git: https://github.com/barak/cool-retro-term.git
 Vcs-Browser: https://github.com/barak/cool-retro-term
