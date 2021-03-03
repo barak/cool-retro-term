@@ -3,14 +3,14 @@ Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Uploaders: Jeka Der <jekader@gmail.com>,
 	   Gürkan Myczko <gurkan@phys.ethz.ch>,
 	   Axel Beckert <abe@debian.org>
-Section: non-free/x11
+Section: x11
 Priority: optional
-Standards-Version: 4.4.1
+Standards-Version: 4.5.1
 Rules-Requires-Root: no
 Homepage: https://github.com/Swordfish90/cool-retro-term
 Vcs-Git: https://github.com/barak/cool-retro-term.git
 Vcs-Browser: https://github.com/barak/cool-retro-term
-Build-Depends: debhelper-compat (= 12), qmlscene,
+Build-Depends: debhelper-compat (= 13), qmlscene,
  help2man,
  qt5-qmake, qtdeclarative5-dev, qml-module-qtquick-controls,
  qml-module-qtgraphicaleffects, qml-module-qtquick-dialogs,
