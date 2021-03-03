@@ -2,7 +2,6 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cool-retro-term
 Upstream-Contact: Filippo Scognamiglio <flscogna@gmail.com>
 Source: https://github.com/Swordfish90/cool-retro-term
-Disclaimer: non-free because of fonts, https://bugs.debian.org/758238
 
 Files: *
 Copyright: 2014-2017 Filippo Scognamiglio
@@ -15,6 +14,46 @@ Files: app/qml/fonts/modern-hermit/*
 Copyright: 2013 Pablo Caro <me@pcaro.es>
            http://pcaro.es/ with Reserved Font Name Hermit.
 License: OFL-1.1
+
+Files: app/qml/fonts/modern-fixedsys-excelsior/*
+Copyright: Darien Maillet Valentine <https://github.com/kika/fixedsys/issues/21>
+License: dfsg-compliant-text
+ The font is intended to be free to use and alter as you see fit.
+
+Files: app/qml/fonts/1971-ibm-3278/*
+Copyright: 2011-2017 Ricardo Banffy
+           1993-2011 Paul Mattes
+           2004-2005 Don Russell
+           2004 Dick Altenbern
+           1990 Jeff Sparkes
+           1989 Georgia Tech Research Corporation (GTRC), Atlanta, GA 30332. All rights reserved.
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+    * Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+ .
+    * Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution.
+ .
+    * Neither the name of Ricardo Banffy, Paul Mattes, Don Russell,
+      Dick Altenbern, Jeff Sparkes, GTRC nor the names of their contributors
+      may be used to endorse or promote products derived from this software
+      without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL RICARDO BANFFY, PAUL MATTES, DON RUSSELL, DICK ALTENBERN, JEFF
+ SPARKES OR GTRC BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Files: app/qml/fonts/modern-inconsolata/*
 Copyright: 2006 Raph Levien
@@ -29,7 +68,7 @@ Copyright: 2004, 2005 Tristan Grimmer
 License: MIT
 
 Files: debian/*
-Copyright: 2016-2017 Gürkan Myczko <gurkan@phys.ethz.ch>
+Copyright: 2016-2020 Gürkan Myczko <gurkan@phys.ethz.ch>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -65,7 +104,6 @@ License: MIT
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-
 
 License: OFL-1.1
  -----------------------------------------------------------
