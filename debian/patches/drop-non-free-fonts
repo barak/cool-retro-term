@@ -1,0 +1,49 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ cool-retro-term (1.1.1-1) unstable; urgency=medium
+ .
+   * Initial release. (Closes: #758238, #785370)
+Author: Gürkan Myczko <gurkan@phys.ethz.ch>
+Bug-Debian: https://bugs.debian.org/758238
+Bug-Debian: https://bugs.debian.org/785370
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2020-01-14
+
+--- cool-retro-term-1.1.1.orig/app/qml/resources.qrc
++++ cool-retro-term-1.1.1/app/qml/resources.qrc
+@@ -19,7 +19,6 @@
+         <file>main.qml</file>
+         <file>SettingsTerminalTab.qml</file>
+         <file>FontScanlines.qml</file>
+-        <file>fonts/1977-apple2/PrintChar21.ttf</file>
+         <file>fonts/1971-ibm-3278/3270Medium.ttf</file>
+         <file>Storage.qml</file>
+         <file>CRTMainMenuBar.qml</file>
+@@ -35,11 +34,6 @@
+         <file>fonts/modern-fixedsys-excelsior/FSEX301-L2.ttf</file>
+         <file>../icons/32x32/cool-retro-term.png</file>
+         <file>Components/SizedLabel.qml</file>
+-        <file>fonts/1979-atari-400-800/AtariClassic-Regular.ttf</file>
+-        <file>fonts/1982-commodore64/C64_Pro_Mono-STYLE.ttf</file>
+-        <file>fonts/1981-ibm-pc/PxPlus_IBM_BIOS.ttf</file>
+-        <file>fonts/1985-ibm-pc-vga/PxPlus_IBM_VGA8.ttf</file>
+-        <file>fonts/1977-commodore-pet/PetMe.ttf</file>
+         <file>BurnInEffect.qml</file>
+         <file>fonts/modern-terminus/TerminusTTF-4.46.0.ttf</file>
+         <file>NewTerminalFrame.qml</file>

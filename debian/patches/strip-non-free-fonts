@@ -1,0 +1,246 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ cool-retro-term (1.1.1-1) unstable; urgency=medium
+ .
+   * Initial release. (Closes: #758238, #785370)
+Author: Gürkan Myczko <gurkan@phys.ethz.ch>
+Bug-Debian: https://bugs.debian.org/758238
+Bug-Debian: https://bugs.debian.org/785370
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2020-01-14
+
+--- cool-retro-term-1.1.1.orig/app/qml/ApplicationSettings.qml
++++ cool-retro-term-1.1.1/app/qml/ApplicationSettings.qml
+@@ -112,7 +112,7 @@ QtObject{
+ 
+     property bool lowResolutionFont: false
+ 
+-    property var fontNames: ["TERMINUS_SCALED", "COMMODORE_PET", "COMMODORE_PET"]
++    property var fontNames: ["TERMINUS_SCALED"]
+     property var fontlist: fontManager.item.fontlist
+ 
+     signal terminalFontChanged(string fontFamily, int pixelSize, int lineSpacing, real screenScaling, real fontWidth)
+--- cool-retro-term-1.1.1.orig/app/qml/FontPixels.qml
++++ cool-retro-term-1.1.1/app/qml/FontPixels.qml
+@@ -33,24 +33,6 @@ QtObject{
+ 
+     property ListModel fontlist: ListModel{
+         ListElement{
+-            name: "COMMODORE_PET"
+-            text: "Commodore PET (1977)"
+-            source: "fonts/1977-commodore-pet/PetMe.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-        }
+-        ListElement{
+-            name: "IBM_PC"
+-            text: "IBM PC (1981)"
+-            source: "fonts/1981-ibm-pc/PxPlus_IBM_BIOS.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-        }
+-        ListElement{
+             name: "PROGGY_TINY"
+             text: "Proggy Tiny (Modern)"
+             source: "fonts/modern-proggy-tiny/ProggyTiny.ttf"
+@@ -77,32 +59,5 @@ QtObject{
+             baseScaling: 3.0
+             fontWidth: 1.0
+         }
+-        ListElement{
+-            name: "APPLE_II"
+-            text: "Apple ][ (1977)"
+-            source: "fonts/1977-apple2/PrintChar21.ttf"
+-            lineSpacing: 2
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.9
+-        }
+-        ListElement{
+-            name: "ATARI_400"
+-            text: "Atari 400-800 (1979)"
+-            source: "fonts/1979-atari-400-800/AtariClassic-Regular.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-        }
+-        ListElement{
+-            name: "COMMODORE_64"
+-            text: "Commodore 64 (1982)"
+-            source: "fonts/1982-commodore64/C64_Pro_Mono-STYLE.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-        }
+     }
+ }
+--- cool-retro-term-1.1.1.orig/app/qml/FontScanlines.qml
++++ cool-retro-term-1.1.1/app/qml/FontScanlines.qml
+@@ -33,24 +33,6 @@ QtObject{
+ 
+     property ListModel fontlist: ListModel{
+         ListElement{
+-            name: "COMMODORE_PET"
+-            text: "Commodore PET (1977)"
+-            source: "fonts/1977-commodore-pet/PetMe.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.7
+-        }
+-        ListElement{
+-            name: "IBM_PC"
+-            text: "IBM PC (1981)"
+-            source: "fonts/1981-ibm-pc/PxPlus_IBM_BIOS.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-        }
+-        ListElement{
+             name: "PROGGY_TINY"
+             text: "Proggy Tiny (Modern)"
+             source: "fonts/modern-proggy-tiny/ProggyTiny.ttf"
+@@ -77,32 +59,5 @@ QtObject{
+             baseScaling: 3.0
+             fontWidth: 1.0
+         }
+-        ListElement{
+-            name: "APPLE_II"
+-            text: "Apple ][ (1977)"
+-            source: "fonts/1977-apple2/PrintChar21.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-        }
+-        ListElement{
+-            name: "ATARI_400"
+-            text: "Atari 400-800 (1979)"
+-            source: "fonts/1979-atari-400-800/AtariClassic-Regular.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.7
+-        }
+-        ListElement{
+-            name: "COMMODORE_64"
+-            text: "Commodore 64 (1982)"
+-            source: "fonts/1982-commodore64/C64_Pro_Mono-STYLE.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.7
+-        }
+     }
+ }
+--- cool-retro-term-1.1.1.orig/app/qml/Fonts.qml
++++ cool-retro-term-1.1.1/app/qml/Fonts.qml
+@@ -91,18 +91,6 @@ QtObject{
+             family: ""
+         }
+         ListElement{
+-            name: "COMMODORE_PET_SCALED"
+-            text: "Commodore PET (1977)"
+-            source: "fonts/1977-commodore-pet/PetMe.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.7
+-            lowResolutionFont: true
+-            isSystemFont: false
+-            family: ""
+-        }
+-        ListElement{
+             name: "PROGGY_TINY_SCALED"
+             text: "Proggy Tiny (Modern)"
+             source: "fonts/modern-proggy-tiny/ProggyTiny.ttf"
+@@ -113,66 +101,6 @@ QtObject{
+             lowResolutionFont: true
+             isSystemFont: false
+             family: ""
+-        }
+-        ListElement{
+-            name: "APPLE_II_SCALED"
+-            text: "Apple ][ (1977)"
+-            source: "fonts/1977-apple2/PrintChar21.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-            lowResolutionFont: true
+-            isSystemFont: false
+-            family: ""
+-        }
+-        ListElement{
+-            name: "ATARI_400_SCALED"
+-            text: "Atari 400-800 (1979)"
+-            source: "fonts/1979-atari-400-800/AtariClassic-Regular.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.7
+-            lowResolutionFont: true
+-            isSystemFont: false
+-            family: ""
+-        }
+-        ListElement{
+-            name: "IBM_PC_SCALED"
+-            text: "IBM PC (1981)"
+-            source: "fonts/1981-ibm-pc/PxPlus_IBM_BIOS.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.8
+-            lowResolutionFont: true
+-            isSystemFont: false
+-            family: ""
+-        }
+-        ListElement{
+-            name: "COMMODORE_64_SCALED"
+-            text: "Commodore 64 (1982)"
+-            source: "fonts/1982-commodore64/C64_Pro_Mono-STYLE.ttf"
+-            lineSpacing: 3
+-            pixelSize: 8
+-            baseScaling: 3.5
+-            fontWidth: 0.7
+-            lowResolutionFont: true
+-            isSystemFont: false
+-            family: ""
+-        }
+-        ListElement{
+-            name: "IBM_DOS"
+-            text: "IBM DOS (1985)"
+-            source: "fonts/1985-ibm-pc-vga/PxPlus_IBM_VGA8.ttf"
+-            lineSpacing: 3
+-            pixelSize: 16
+-            baseScaling: 2.0
+-            fontWidth: 1.0
+-            lowResolutionFont: true
+-            isSystemFont: false
+-            family: ""
+         }
+         ListElement{
+             name: "HERMIT"
